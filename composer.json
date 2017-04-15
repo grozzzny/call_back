@@ -12,6 +12,8 @@
         }
     ],
     "require": {
+        "php": ">=5.4.0",
+        "grozzzny/widgets": "dev-master",
         "yiisoft/yii2": "*"
     },
     "autoload": {
