@@ -11,6 +11,7 @@ Please, install [User module for EasyiiCMS by following these instructions](http
 $ php composer.phar require grozzzny/call_back "dev-master"
 ```
 
+
 Run migrations
 ```bash
 php yii migrate --migrationPath=@vendor/grozzzny/call_back/migrations
