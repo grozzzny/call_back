@@ -29,6 +29,7 @@ class CallBack extends Base
         return [
             ['id', 'number', 'integerOnly' => true],
             [['name', 'ip'], 'string'],
+            [['description'], 'safe'],
             [['datetime'], 'integer'],
             [['email'], 'email'],
             ['phone', 'match', 'pattern' => '/^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/'],
@@ -52,6 +53,7 @@ class CallBack extends Base
             'ip' => 'IP',
             'order_num' => 'Индекс сортировки',
             'status' => 'Состояние',
+            'description' => 'Описание',
         ];
     }
 
@@ -77,6 +79,7 @@ class CallBack extends Base
                 ['LIKE', 'name', $get['text']],
                 ['LIKE', 'email', $get['text']],
                 ['LIKE', 'phone', $get['text']],
+                ['LIKE', 'description', $get['text']],
             ]
             );
         }
