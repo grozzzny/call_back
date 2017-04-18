@@ -27,7 +27,7 @@ $sort = $data->getSort();
         <td><?= $item->primaryKey ?></td>
         <td>
             <a href="<?= Url::to(['/admin/'.$module.'/a/edit', 'id' => $item->id, 'alias' => $item::ALIAS]) ?>">
-                <?= $item->name ?>
+                <?= $item->getName() ?>
             </a>
         </td>
         <td>
