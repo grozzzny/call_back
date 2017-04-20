@@ -35,7 +35,8 @@ $this->registerJs('$(document).on("beforeSubmit", "#callback_form", function () 
 ?>
 
     <div class="col-md-8 col-md-offset-2">
-
+        <? $model->description = "Заявка получена со страницы: http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";?>
+        <?= $form->field($model, 'description')->hiddenInput()->label(false);?>
         <?= $form->field($model, 'email')->input('text', ['placeholder' => 'Электронный адрес'])->label(false);?>
         <?= $form->field($model, 'phone')->input('text', ['placeholder' => 'Номер телефона'])->label(false);?>
 
