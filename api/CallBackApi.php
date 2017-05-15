@@ -12,7 +12,7 @@ class CallBackApi
     {
         $model = new CallBack(['scenario' => CallBack::SCENARIO_PHONE]);
 
-        $params = ArrayHelper::merge($params, ['model' => $model]);
+        $params = ArrayHelper::merge(['model' => $model, 'id' => 'callback_form'], $params);
 
         return Yii::$app->getView()->render($view, $params);
     }
