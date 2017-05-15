@@ -7,11 +7,11 @@ $form = ActiveForm::begin([
     'method' => 'get',
     'options' => [
         'class' => 'row',
-        'id' => 'callback_form',
+        'id' => $id,
     ],
 ]);
 
-$this->registerJs('$(document).on("beforeSubmit", "#callback_form", function () {
+$this->registerJs('$(document).on("beforeSubmit", "#'.$id.'", function () {
     var form = $(this);
     var values = form.serialize();
     form.find(".text-success").eq(0).addClass("hide");
